@@ -1,5 +1,6 @@
 import tensorflow as tf
 import numpy as np
+from PIL import Image
 
 class Task1:
     def __init__(self):
