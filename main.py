@@ -18,7 +18,6 @@ while True:
     scheduler.SCH_Update()
     scheduler.SCH_Dispatch_Tasks()
     time.sleep(1)
-
-task1b.camera.release()
-task1a.camera.release()
-cv2.destroyAllWindows()
+    task3.camera.release()
+    task3cam2.camera.release()
+    cv2.destroyAllWindows()
