@@ -1,7 +1,21 @@
-class Task2:
-    def __init__(self):
-        print("Initiate task 2")
-        return
+#pip install adafruit-io
+import random
+import time
+import sys
+from  Adafruit_IO import  MQTTClient
 
-    def Task2_Run(self):
-        print("Task 2 is activated")
+
+AIO_USERNAME = "your_name"
+AIO_KEY = "your_key"
+
+
+client = MQTTClient(AIO_USERNAME , AIO_KEY)
+
+client.connect()
+client.loop_background()
+time.sleep(5)
+
+while True:
+    value = random.randint(0, 100)
+    client.publish("your_feed", value)
+    time.sleep(30)
